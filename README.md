@@ -235,11 +235,9 @@ Y; el log de la ejecución:
 ![Data](/imagenes/tarea2-08.png)
 
 
-
 ### Integrantes
 Manuel Tinajero   manuel93tc@hotmail.com
 Sebastián Peña    penasantiago346@gmail.com
 Omar Vélez        omargo33@gmail.com
 Susy Robalino     susana.robalino@gmail.com
-
-
+Joel Cittar       joelcittar@gmail.com   
