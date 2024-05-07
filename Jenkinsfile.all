@@ -35,8 +35,8 @@ pipeline {
 
     stage('Pass To K8s'){
         steps {
-        sh '''        
-        minikube kubectl create deployment testapp --image=127.0.0.1:443/mguazzardo/testapp
+        sh '''
+	sshpass -p 'master' ssh 172.17.0.1 -l root -o StrictHostKeyChecking=no "kubectl create deployment testapp --image=192.168.101.147:443/mguazzardo/testapp"        
        echo "Wait"
        sleep 10
        sshpass -p 'master' ssh 172.17.0.1 -l root -o StrictHostKeyChecking=no "kubectl expose deployment testapp --port=3000"
