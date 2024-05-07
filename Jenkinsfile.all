@@ -36,7 +36,7 @@ pipeline {
     stage('Pass To K8s'){
         steps {
         sh '''
-	sshpass -p 'master' ssh 172.17.0.1 -l root -o StrictHostKeyChecking=no "kubectl create deployment testapp --image=127.0.0.1:40137/mguazzardo/testapp"        
+	sshpass -p 'master' ssh 172.17.0.1 -l root -o StrictHostKeyChecking=no "kubectl create deployment testapp --image=192.168.49.2:8443/mguazzardo/testapp"        
        echo "Wait"
        sleep 10
        sshpass -p 'master' ssh 172.17.0.1 -l root -o StrictHostKeyChecking=no "kubectl expose deployment testapp --port=3000"
